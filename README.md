@@ -22,11 +22,11 @@ npm run dev
 
 
 #### 使用技术栈
-electron: 桌面应用框架
-node: 后端服务
-react: view渲染
-prop-types:类型检查
-bootstrap: css样式库
+- electron: 桌面应用框架
+- node: 后端服务
+- react: view渲染
+- prop-types:类型检查
+- bootstrap: css样式库
 
 #### elctorn && react 配置说明
 - concurrently  同时运行多个命令
