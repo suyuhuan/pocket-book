@@ -1,0 +1,107 @@
+{
+  "id": "2274596",
+  "name": "money",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "695183",
+      "name": "删除 关",
+      "font_class": "shanchu",
+      "unicode": "e63a",
+      "unicode_decimal": 58938
+    },
+    {
+      "icon_id": "1440881",
+      "name": "编辑",
+      "font_class": "bianji",
+      "unicode": "e632",
+      "unicode_decimal": 58930
+    },
+    {
+      "icon_id": "2742671",
+      "name": "添加",
+      "font_class": "tianjia",
+      "unicode": "e67b",
+      "unicode_decimal": 59003
+    },
+    {
+      "icon_id": "386463",
+      "name": "房贷1",
+      "font_class": "fangdai",
+      "unicode": "e62c",
+      "unicode_decimal": 58924
+    },
+    {
+      "icon_id": "436008",
+      "name": "饮食",
+      "font_class": "yinshi",
+      "unicode": "e800",
+      "unicode_decimal": 59392
+    },
+    {
+      "icon_id": "479383",
+      "name": "保养",
+      "font_class": "baoyang",
+      "unicode": "e60a",
+      "unicode_decimal": 58890
+    },
+    {
+      "icon_id": "688254",
+      "name": "家用电器",
+      "font_class": "jiayong",
+      "unicode": "e62b",
+      "unicode_decimal": 58923
+    },
+    {
+      "icon_id": "883877",
+      "name": "交通",
+      "font_class": "jiaotong",
+      "unicode": "e604",
+      "unicode_decimal": 58884
+    },
+    {
+      "icon_id": "1354920",
+      "name": "旅游",
+      "font_class": "lvyou",
+      "unicode": "e623",
+      "unicode_decimal": 58915
+    },
+    {
+      "icon_id": "2803738",
+      "name": "股票",
+      "font_class": "gupiao",
+      "unicode": "e6ad",
+      "unicode_decimal": 59053
+    },
+    {
+      "icon_id": "7790995",
+      "name": "工资",
+      "font_class": "gongzi",
+      "unicode": "e7e9",
+      "unicode_decimal": 59369
+    },
+    {
+      "icon_id": "14033458",
+      "name": "车贷",
+      "font_class": "chedai",
+      "unicode": "e75f",
+      "unicode_decimal": 59231
+    },
+    {
+      "icon_id": "15273144",
+      "name": "zu-01",
+      "font_class": "fangzu",
+      "unicode": "e600",
+      "unicode_decimal": 58880
+    },
+    {
+      "icon_id": "18008372",
+      "name": "基金",
+      "font_class": "jijin",
+      "unicode": "e60c",
+      "unicode_decimal": 58892
+    }
+  ]
+}

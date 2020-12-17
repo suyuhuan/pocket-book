@@ -1,0 +1,22 @@
+
+$TColor: #ea5455;
+$lg:linear-gradient(#feb692,#ea5455);
+$whiter:#ffffff;
+.container-fluid{
+    .header {
+        width: 100%;
+        height: 20vh;
+        color: $whiter;
+        background: $lg;
+        padding: 1vh;
+        margin-bottom: 1.5vh;
+    }
+    .nav-tabs .nav-link.active{
+        color: $whiter;
+        background:$TColor;
+    }
+    .dropdown-item.active,
+    .dropdown-item:active{ 
+        background:$TColor;
+    }
+}
