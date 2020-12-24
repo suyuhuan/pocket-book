@@ -1,15 +1,15 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import PropTypes from 'prop-types'
 
 
 export const Tabs = ({activeIndex, onTabChange,children}) => {
-  //  console.log(children);
+  const node = useRef(null)
     return (
       <ul className="nav nav-tabs">
           { children && children.map((child,index)=>{
               const activeClassName = (activeIndex === index) ? 'nav-link active' : 'nav-link'
               return (
-                <li className="nav-item" key={index}>
+                <li className="nav-item" key={index} refs={node}>
                    <a
                      className={activeClassName}
                      onClick={(event)=>{onTabChange(event, index)}}

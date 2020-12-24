@@ -1,8 +1,8 @@
 import { testItems, testCategories,testIcon} from './testData'
 import { ID, toTime} from "../utils/utility";
 
-//组合数据
-const itemData = testItems.map(item => {
+
+const allData = testItems.map(item => {
     item.amount = Math.abs(item.amount);
     let toDate = toTime(item.time * 1)
     let name = testCategories.filter(fil => fil.id.includes(item.category))[0]['name']
@@ -17,18 +17,19 @@ const itemData = testItems.map(item => {
     return item
 })
 
-//计算钱的总和
-// const totalAmount = (type, data) => {
-//     let money;
-//     data.reduce((total,num)=>{
-        
-//         return total + num
-//     },type)
-    
-//     return money
-// }
-//计算支出
+const searchData = (searchType,searchKeyword,searchData) => {
+    let resultContent = searchData.filter((item) =>(typeof item[searchType] !== 'number') ? 
+    item[searchType].includes(searchKeyword):
+    String(item[searchType]).includes(searchKeyword))
+    return resultContent;
+}
+
+const totalNumber = (data) => {
+    return data.length ? data.map(item => item.amount).reduce((total,item)=> total + item) : 0
+}
 
 export {
-    itemData
+    allData,
+    searchData,
+    totalNumber
 }

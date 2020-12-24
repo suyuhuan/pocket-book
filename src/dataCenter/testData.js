@@ -303,5 +303,5 @@ export const testItems = [
         category: '1vjj47vpd28',
         amount:  2000
       }
-    ]
+]
 

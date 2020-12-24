@@ -7,7 +7,6 @@ const MonthPicker = ({year,month,onChange})  => {
     const [selectdYear, setSelectdYear] = useState(year)
     const [selectdMonth, setSelectdMonth] = useState(month)
     const [isOpen, setOpen] = useState(false)
-    const [isOpenMonth,setOpenMonth] = useState(false)
     const monthRange = numRange(12,1)
     const yearRange = numRange(10,-3).map(number => number + year)
 
@@ -19,14 +18,12 @@ const MonthPicker = ({year,month,onChange})  => {
 
     const selectYear = (yearNumber) => {
         setSelectdYear(yearNumber)
-        setOpenMonth(true)
     }
 
     const selectMonth = (monthNumber) => {
         setSelectdMonth(monthNumber)
         onChange(selectdYear, monthNumber)
         setOpen(false)
-        setOpenMonth(false)
     }
     const handleClick = (e) => {
         if (node.current.contains(e.target)) {

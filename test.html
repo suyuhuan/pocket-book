@@ -46,52 +46,52 @@ const testCategories = [
     { id: '1vjj47vpd28', type:  1, name: '股票投资' },
     { id: '5il79e11628', type:  1, name: '基金投资' }
 ]
-  
+   
 const testItems = [
       {
-        type:  0,
+        type: 0,
         time: '1561910400000',
         category: '8s0p77c323',
-        amount:  5400
+        amount: 5400
       },
         {
-        type:  0,
+        type: 0,
         time: '1561910400000',
         category: '0fnhbcle6hg',
-        amount:  1500
+        amount: 1500
       },
         {
-        type:  0,
+        type: 0,
         time: '1563897600000',
         category: '3tqndrjqgrg',
-        amount:  3900
+        amount: 3900
       },
         {
-        type:  0,
+        type: 0,
         time: '1564502400000',
         category: 'bsn20th0k2o',
-        amount: '1900'
+        amount: 1900
       },
         {
-        type:  0,
+        type: 0,
         time: '1564588800000',
         category: '8s0p77c323',
-        amount:  5400
+        amount: 5400
       },
         {
-        type:  0,
+        type: 0,
         time: '1564588800000',
         category: '0fnhbcle6hg',
-        amount:  1500
+        amount: 1500
       },
         {
-        type:  0,
+        type: 0,
         time: '1564588800000',
         category: '3tqndrjqgrg',
         amount:  5000
       },
         {
-        type:  0,
+        type: 0,
         time: '1566316800000',
         category: 'bsn20th0k2o',
         amount:  2000
@@ -325,7 +325,6 @@ const testItems = [
         amount:  2000
       }
 ]
-
 const itemData = testItems.map(item => {
     item.amount = Math.abs(item.amount);
     let name = testCategories.filter(fil => fil.id.includes(item.category))[0]['name']
@@ -336,29 +335,22 @@ const itemData = testItems.map(item => {
     return item
 })
 
-
-
-const totalAmount = (sumtype, data) => {  
-  let result = 0;
-   const money = data && data.reduce((num,item)=>{
-       console.log(item.type,'item.type')
-        console.log('---------')
-       if (sumtype === item.type) {
-          console.log(item.amount,'if === item.amount')
-          result = result + item.amount * 1
-          return result;
-          console.log(item.type,'if === item.type')
-          console.log(result,'if == item.type result')
-       }
-        console.log(sumtype,'my.type');
-        console.log('if not === ---------')
-        console.log(item.amount,'if not -- item.amount');
-        // return total + num
-
-    })
-    
-    return money
+//通过关键字过滤
+const search = (searchType,searchKeyword,searchData) => {
+    let resultContent = searchData.filter((item) =>(typeof item[searchType] !== 'number') ? 
+    item[searchType].includes(searchKeyword):
+    String(item[searchType]).includes(searchKeyword))
+    return resultContent;
 }
-// totalAmount(0,itemData)
-console.log(totalAmount(0,itemData))//160000
+//统计
+const totalNumber = (data) => {
+ return data.map(item => item.amount).reduce((total,item)=> total + item)
+}
+
+//统计总数
+console.log(itemData);
+let content = search('type',0,itemData);
+console.log(content);
+const nums = totalNumber(content);
+console.log(nums)
 </script>

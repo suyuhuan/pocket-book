@@ -1,5 +1,6 @@
 const {app, ipcMain, Menu} = require('electron')
-const AppWindow = require('./AppWindow')
+const AppWindow = require('./utils/AppWindow')
+// const menuTemplate = require('./utils/menuTemplate')
 const isDev = require('electron-is-dev')
 
 const urlLocation = isDev ? "http://localhost:3000": " "
@@ -16,4 +17,8 @@ app.on('ready',()=>{
     mainWindow.on('closed', ()=> {
         mainWindow = null
     })
+
+    // set the menu 
+    // const menu = Menu.buildFromTemplate(menuTemplate)
+    // Menu.sendActionToFirstResponder(menu)
 })

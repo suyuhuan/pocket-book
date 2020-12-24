@@ -3,6 +3,7 @@ $TColor: #ea5455;
 $lg:linear-gradient(#feb692,#ea5455);
 $whiter:#ffffff;
 .container-fluid{
+    a{color: #212529;cursor: pointer;}
     .header {
         width: 100%;
         height: 20vh;
